@@ -1,0 +1,8 @@
+.status__bar {
+  margin-top: 14px;
+  margin-left: 33px;
+
+  @media (min-width: 376px) {
+    display: none;
+  }
+}
