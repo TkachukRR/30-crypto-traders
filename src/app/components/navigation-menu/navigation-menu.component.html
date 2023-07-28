@@ -1,25 +1,27 @@
 <div class="navigation">
-  <button class="navigation__menu btn" type="button">
+  <button class="navigation__btn" type="button" (click)="toggleMenu()">
     <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1H16M1 7H16" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
-  <div class="navigation__logo">
-    <app-logo [visibleImage]="false"></app-logo>
+  <div [ngClass]="{'isVisible' : isVisibleMenu}" class="navigation__menu">
+    <div class="navigation__logo">
+      <app-logo [visibleImage]="false"></app-logo>
+    </div>
+    <nav>
+      <ul class="navigation__pages">
+        <li *ngFor="let link of navLinks" class="header__navigation--item">
+          <a [href]="'/'+ link">{{ link | titlecase}}</a>
+        </li>
+      </ul>
+      <ul class="navigation__auth">
+        <li class="navigation__auth--item btn btn--light">
+          <a href="/">membership</a>
+        </li>
+        <li class="navigation__auth--item btn btn--dark">
+          <a href="/">login</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav>
-    <ul class="navigation__pages">
-      <li *ngFor="let link of navLinks" class="header__navigation--item">
-        <a [href]="'/'+ link">{{ link | titlecase}}</a>
-      </li>
-    </ul>
-    <ul class="navigation__auth">
-      <li class="navigation__auth--item btn btn--light">
-        <a href="/">membership</a>
-      </li>
-      <li class="navigation__auth--item btn btn--dark">
-        <a href="/">login</a>
-      </li>
-    </ul>
-  </nav>
 </div>

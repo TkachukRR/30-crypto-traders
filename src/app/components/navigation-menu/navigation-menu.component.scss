@@ -1,0 +1,18 @@
+.navigation {
+  &__btn{
+    border: 0;
+    background: transparent;
+  }
+
+  &__menu {
+    display: none;
+
+    @media (min-width: 376px) {
+      display: block;
+    }
+  }
+}
+
+.isVisible{
+  display: block;
+}
