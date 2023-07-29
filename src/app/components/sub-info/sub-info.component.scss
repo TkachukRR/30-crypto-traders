@@ -1,0 +1,12 @@
+.sub {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+  &__item {
+    line-height: 22px;
+    font-size: 8px;
+    white-space: nowrap;
+  }
+}

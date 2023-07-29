@@ -1,10 +1,11 @@
-<div class="navigation">
-  <button class="navigation__btn" type="button" [hidden]="isVisibleMenu" (click)="toggleMenu()">
-    <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1H16M1 7H16" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </button>
-  <div [ngClass]="{'visible' : isVisibleMenu}" class="navigation__menu">
+<button class="navigation__btn" type="button" [hidden]="isVisibleMenu" (click)="toggleMenu()">
+  <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1H16M1 7H16" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<div class="navigation" [ngClass]="{'visible' : isVisibleMenu}" >
+  <div class="navigation__menu">
     <div class="navigation__logo">
       <app-logo [visibleImage]="false"></app-logo>
     </div>
@@ -35,5 +36,8 @@
         </a>
       </li>
     </ul>
+    <app-sub-info></app-sub-info>
+    <p class="copyright">© Copyright 2022 - Xtrades. All rights reserved.</p>
   </div>
 </div>
+
