@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavigationMenuComponent {
   public navLinks: string[] = ['home', 'career'];
-  public isVisibleMenu = false;
+  public isVisibleMenu = true;
 
   public toggleMenu(): void{
     this.isVisibleMenu = !this.isVisibleMenu
