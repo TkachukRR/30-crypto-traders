@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent {
-  @Input() position : 'header' | 'body' = 'header';
-  @Input() visibleImage = true;
+  @Input() showMiniLogo = false;
+  @Input() showBackground = false;
+  @Input() logoTextSize: 'xs'|'s'|'m'|'l' = 's';
 }
