@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from "./components/login-page/login-page.component";
 import { GeneralPageComponent } from "./components/general-page/general-page.component";
+import { AuthGuard } from "./services/auth-guard.service";
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'general',
-    component: GeneralPageComponent
+    component: GeneralPageComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',
