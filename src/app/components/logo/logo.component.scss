@@ -1,3 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__image{
+    margin-right: 8px;
+  }
+}
+
 .logo__text {
   &--xs {
     width: 77px;

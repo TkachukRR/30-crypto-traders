@@ -1,31 +1,34 @@
 .navigation {
   display: flex;
-  flex-direction: column;
-  padding: 0 21px;
-  z-index: 999;
+  align-items: center;
+  padding: 28px 30px 28px 24px;
 
-    @media (max-width: 740px) {
-      position: absolute;
-      top: 0;
-      left: 0;
+  @media (max-width: 376px ) {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-      height: 100vh;
-      width: 290px;
+    height: 100vh;
+    width: 290px;
 
-      padding-top: 53px;
-      background-color: var(--bg-menu);
-    }
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 53px 21px 0;
+    z-index: 999;
+    background-color: var(--bg-menu);
+  }
 
     &__btn{
-      //position: absolute;
-      //top: 53px;
-      //left: 10px;
       border: 0;
       background: transparent;
       padding: 5px;
       margin-left: 15px;
       margin-top: 4px;
       margin-bottom: 10px;
+      @media (min-width: 376px) {
+        display: none;
+      }
     }
 
   &__menu {
@@ -37,34 +40,71 @@
   }
 
   &__logo {
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       margin-bottom: 50px;
     }
   }
 
   &__pages {
     flex-grow: 1;
+
   }
 
   &__pages--item {
+    @media (min-width: 376px) {
+      margin-left: 48px;
+      font-size: 14px;
+    }
     font-size: 18px;
     margin-left: 2px;
+
   }
 
   &__pages--item:not(:last-of-type){
-    margin-bottom: 24px;
+    @media (max-width: 376px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__pages--item:not(:first-of-type){
+    @media (min-width: 376px) {
+      display: none;
+    }
   }
 
   &__auth{
-  margin-bottom: 20px;
+    @media (max-width: 376px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 376px) {
+      display: flex;
+    }
+  }
+
+  &__auth--item{
+
   }
 
   &__auth--item:not(:last-of-type){
-    margin-bottom: 15px;
+    @media (max-width: 376px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
 .btn {
+  @media (min-width: 376px) {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    text-transform: capitalize;
+    border-radius: 8px;
+    letter-spacing: 0;
+  }
+
   width: 240px;
   padding: 15px;
   text-transform: uppercase;
@@ -96,6 +136,9 @@
   background: var(--bg-menu);
   border-radius: 14px;
   z-index: -1;
+  @media (min-width: 376px) {
+    border-radius: 8px;
+  }
 }
 
 .btn--light {
@@ -104,6 +147,9 @@
   background: var(--bg-btn-gradient);
 
   z-index: 1;
+  @media (min-width: 376px) {
+    margin-left: 10px;
+  }
 }
 
 .btn__arrow{
@@ -134,4 +180,7 @@
   color: var(--bg-backdrop);
   backdrop-filter: var(--bg-backdrop-filter);
   z-index: 1;
+  @media (min-width: 376px) {
+    display: none;
+  }
 }
