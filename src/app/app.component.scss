@@ -1,6 +1,8 @@
 .status__bar {
-  margin-top: 14px;
+  margin-top: 17px;
   margin-left: 33px;
+  margin-bottom: 17px;
+  height: 14px;
 
   @media (min-width: 376px) {
     display: none;
