@@ -7,6 +7,7 @@ import { NavigationMenuComponent } from './components/navigation-menu/navigation
 import { LogoComponent } from './components/logo/logo.component';
 import { SubInfoComponent } from './components/sub-info/sub-info.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { GeneralPageComponent } from './components/general-page/general-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     NavigationMenuComponent,
     LogoComponent,
     SubInfoComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    GeneralPageComponent
   ],
   imports: [
     BrowserModule,
