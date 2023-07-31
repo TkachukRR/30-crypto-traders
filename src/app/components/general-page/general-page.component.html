@@ -1,1 +1,40 @@
-<p>general-page works!</p>
+<div class="general">
+  <h1 class="general__title">{{ title }}</h1>
+
+  <ul class="general__hiring hiring__list">
+    <li class="hiring__item" *ngFor="let h of hiring">
+      <h2 class="hiring__title">
+        <button type="button"> {{h.position}}
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.5" d="M1 7L7 1L13 7" stroke="#AFB9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </h2>
+      <p class="hiring__description">
+        {{h.description}}
+      </p>
+      <ul class="hiring__responsibilities responsibilities__list">
+        <li class="responsibilities__item" *ngFor="let resp of h.descrList">
+          {{ resp }}
+        </li>
+      </ul>
+      <p class="hiring__skills">
+        {{h.skillsTitle}}
+      </p>
+      <ul class="hiring__needs needs__list">
+        <li class="needs__item" *ngFor="let skill of h.skills">
+          {{ skill }}
+        </li>
+      </ul>
+      <div class="hiring__contact">
+        Contact us at
+        <a [href]="'mailto:' + h.contactWith">{{h.contactWith}}</a>
+        and include information
+        about your previous works and experience
+        to set up an interview.
+      </div>
+      <a [href]="'mailto:' + h.contactWith" class="hiring__btn btn" >Contact us now</a>
+    </li>
+
+  </ul>
+</div>
