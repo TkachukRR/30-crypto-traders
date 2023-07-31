@@ -1,0 +1,142 @@
+.general {
+  padding: 12px 21px 44px;
+
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+
+    margin-bottom: 20px;
+  }
+}
+
+.hiring {
+  &__list{}
+
+  &__item{
+    background-color: var(--bg-items);
+    border-radius: 13px;
+    margin-bottom: 5px;
+  }
+
+  &__title--btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 21px 17px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    background: none;
+    border: 0;
+  }
+  &__title--arrow{
+    transform: rotateX(0deg);
+  }
+
+  &__wrapper {
+    padding: 18.5px 17px 0;
+    border-bottom: 1px solid var(--item-border);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 13px;
+  }
+
+  &__description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 10px;
+  }
+
+  &__responsibilities{
+    margin-bottom: 5px;
+  }
+
+  &__skills{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 36px;
+    margin-bottom: 2px;
+  }
+
+  &__needs {
+    margin-bottom: 19px;
+  }
+
+  &__container {
+    padding: 15px 25px 30px;
+  }
+
+  &__contact{
+    font-size: 10px;
+    line-height: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__mail{
+    text-decoration-line: underline;
+    color: var(--text-tertiary);
+  }
+
+  &__btn{
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 14px;
+    border-radius: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    text-align: center;
+    color: var(--text-btn-contactus);
+    background: var(--bg-btn-gradient);
+  }
+}
+
+.responsibilities {
+  &__item{
+    margin-left: 20px;
+    list-style: disc;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+  }
+}
+
+.needs {
+  &__item{
+    margin-left: 20px;
+    list-style: disc;
+    font-size: 12px;
+    line-height: 30px;
+    color: var(--text-secondary);
+  }
+}
+
+.card__info{
+  border-top: 1px solid var(--item-border);
+  margin-bottom: 20px;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+
+
