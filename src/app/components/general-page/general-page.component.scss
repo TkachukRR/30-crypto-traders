@@ -1,22 +1,43 @@
 .general {
   padding: 12px 21px 44px;
 
+  @media (min-width: 1000px) {
+    max-width: 977px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   &__title {
     font-weight: 600;
     font-size: 24px;
 
     margin-bottom: 20px;
+    @media (min-width: 1000px) {
+      width: 250px;
+      font-size: 32px;
+      line-height: 50px;
+      margin-bottom: 32px;
+    }
   }
 }
 
 .hiring {
-  &__list{}
+  &__list{
+    @media (min-width: 1000px) {
+      width: 250px;
+    }
+  }
 
   &__item{
     background-color: var(--bg-items);
     border-radius: 13px;
     margin-bottom: 5px;
+    @media (min-width: 1000px) {
+      background-color: transparent;
+      border-top: 1px solid rgba(255,255,255, 0.5);
+      border-radius: 0;
+      margin-bottom: 0px;
+    }
   }
 
   &__title--btn {
@@ -31,6 +52,15 @@
     line-height: 18px;
     background: none;
     border: 0;
+
+    @media (min-width: 1000px) {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 21px;
+      padding: 20px 0;
+      opacity: 0.5;
+      text-align: left;
+    }
   }
   &__title--arrow{
     transform: rotateX(0deg);
@@ -39,6 +69,9 @@
   &__wrapper {
     padding: 18.5px 17px 0;
     border-bottom: 1px solid var(--item-border);
+    @media (min-width: 1000px) {
+      padding: 30px 35px;
+    }
   }
 
   &__subtitle {
@@ -46,6 +79,11 @@
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 13px;
+    @media (min-width: 1000px) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 17px;
+    }
   }
 
   &__description{
@@ -57,10 +95,16 @@
     color: var(--text-secondary);
 
     margin-bottom: 10px;
+    @media (min-width: 1000px) {
+      margin-bottom: 12px;
+    }
   }
 
   &__responsibilities{
     margin-bottom: 5px;
+    @media (min-width: 1000px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__skills{
@@ -68,6 +112,11 @@
     font-size: 12px;
     line-height: 36px;
     margin-bottom: 2px;
+
+    @media (min-width: 1000px) {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
   }
 
   &__needs {
@@ -76,6 +125,12 @@
 
   &__container {
     padding: 15px 25px 30px;
+    @media (min-width: 1000px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 36px 33px;
+    }
   }
 
   &__contact{
@@ -84,11 +139,18 @@
     color: var(--text-secondary);
     margin-bottom: 25px;
     text-align: center;
+    @media (min-width: 1000px) {
+      width: 225px;
+      text-align: start;
+      font-size: 8px;
+      margin-bottom: 0;
+    }
   }
 
   &__mail{
     text-decoration-line: underline;
     color: var(--text-tertiary);
+
   }
 
   &__btn{
@@ -104,6 +166,9 @@
     text-align: center;
     color: var(--text-btn-contactus);
     background: var(--bg-btn-gradient);
+    @media (min-width: 1000px) {
+      margin: 0;
+    }
   }
 }
 
@@ -116,6 +181,11 @@
     line-height: 24px;
     color: var(--text-secondary);
     margin-bottom: 5px;
+
+    @media (min-width: 1000px) {
+      font-size: 12px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -126,13 +196,43 @@
     font-size: 12px;
     line-height: 30px;
     color: var(--text-secondary);
+
   }
 }
 
 .card__info{
   border-top: 1px solid var(--item-border);
   margin-bottom: 20px;
+  @media (min-width: 1000px) {
+    position: absolute;
+    right: 0;
+    top: 92px;
+    width: 670px;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid var(--item-border);
+    background-color: var(--bg-items);
+  }
 }
+
+.card__img{
+    display: none;
+
+  @media (min-width: 1000px) {
+    display: block;
+    background-image: url(/assets/Frame.png);
+    width: 149px;
+    height: 680px;
+    border-right: 1px solid var(--item-border);
+  }
+}
+
+.card__box {
+  @media (min-width: 1000px) {
+    width: 521px;
+  }
+}
+
 
 .rotate {
   transform: rotateX(180deg);
