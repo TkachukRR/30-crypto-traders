@@ -7,47 +7,16 @@
         <ul class="general__hiring hiring__list" >
           <li class="hiring__item" *ngFor="let h of hiring">
             <h2 class="hiring__title">
-              <button class="hiring__title--btn btn" type="button" (click)="onItemClick(h)"> {{h.cardTitle}}
+              <button
+                class="hiring__title--btn btn"
+                type="button"
+                [ngClass]="{'active': h.cardTitle === selectedItem?.cardTitle}"
+                (click)="onItemClick(h)"> {{h.cardTitle}}
                 <svg *ngIf="!isLaptopScreen" class="hiring__title--arrow" [ngClass]="{'rotate': h.cardTitle === selectedItem?.cardTitle}" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.5" d="M1 7L7 1L13 7" stroke="#AFB9C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
             </h2>
-            <!--        <div class="card__info" *ngIf="selectedItem && h.cardTitle === selectedItem.cardTitle">-->
-            <!--          <div class="card__img">-->
-            <!--          </div>-->
-            <!--          <div class="card__box">-->
-            <!--          <div class="hiring__wrapper">-->
-            <!--            <h3 class="hiring__subtitle">{{selectedItem.position}}</h3>-->
-            <!--            <p class="hiring__description">-->
-            <!--              {{selectedItem.description}}-->
-            <!--            </p>-->
-            <!--            <ul class="hiring__responsibilities responsibilities__list">-->
-            <!--              <li class="responsibilities__item" *ngFor="let resp of selectedItem.descrList">-->
-            <!--                {{ resp }}-->
-            <!--              </li>-->
-            <!--            </ul>-->
-            <!--            <p class="hiring__skills">-->
-            <!--              {{selectedItem.skillsTitle}}-->
-            <!--            </p>-->
-            <!--            <ul class="hiring__needs needs__list">-->
-            <!--              <li class="needs__item" *ngFor="let skill of selectedItem.skills">-->
-            <!--                {{ skill }}-->
-            <!--              </li>-->
-            <!--            </ul>-->
-            <!--          </div>-->
-            <!--          <div class="hiring__container">-->
-            <!--            <div class="hiring__contact">-->
-            <!--              Contact us at-->
-            <!--              <a [href]="'mailto:' + h.contactWith" class="hiring__mail">{{h.contactWith}}</a>-->
-            <!--              and include information-->
-            <!--              about your previous works and experience-->
-            <!--              to set up an interview.-->
-            <!--            </div>-->
-            <!--            <a [href]="'mailto:' + selectedItem.contactWith" class="hiring__btn btn" >Contact us now</a>-->
-            <!--          </div>-->
-            <!--          </div>-->
-            <!--        </div>-->
             <app-card *ngIf="!isLaptopScreen && selectedItem?.cardTitle === h.cardTitle" [itemInfo]="selectedItem "></app-card>
           </li>
 

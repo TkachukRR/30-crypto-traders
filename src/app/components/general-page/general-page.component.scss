@@ -105,6 +105,12 @@
   }
 }
 
+.active{
+  @media (min-width: 1000px) {
+    font-weight: 600;
+    opacity: 1;
+  }
+}
 
 .footer__container{
   @media (min-width: 1000px) {
