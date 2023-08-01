@@ -1,10 +1,14 @@
 .general {
   padding: 12px 21px 44px;
-
+  flex-grow: 1;
   @media (min-width: 1000px) {
     max-width: 977px;
     margin: 0 auto;
     position: relative;
+  }
+  &:first-child{
+    @media (min-width: 1000px) {
+    }
   }
 
   &__title {
@@ -17,6 +21,12 @@
       font-size: 32px;
       line-height: 50px;
       margin-bottom: 32px;
+    }
+  }
+
+  &__hiring{
+    @media (min-width: 1000px) {
+
     }
   }
 }
@@ -237,6 +247,25 @@
 .rotate {
   transform: rotateX(180deg);
 }
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+.page__body {
+  flex-grow: 1;
+}
 
+.page__footer{
+  display: none;
+
+  @media (min-width: 1000px) {
+    display: block;
+    max-width: 977px;
+    margin: 0 auto;
+    background-color: var(--bg-items);
+    padding: 46px 7px 40px;
+  }
+}
 

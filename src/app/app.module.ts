@@ -8,6 +8,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { SubInfoComponent } from './components/sub-info/sub-info.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { GeneralPageComponent } from './components/general-page/general-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GeneralPageComponent } from './components/general-page/general-page.com
     LogoComponent,
     SubInfoComponent,
     LoginPageComponent,
-    GeneralPageComponent
+    GeneralPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
