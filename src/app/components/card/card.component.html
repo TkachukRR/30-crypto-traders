@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card__img">
+  </div>
+  <div class="card__box">
+    <div class="card__wrapper">
+      <h3 class="card__subtitle">{{itemInfo?.position}}</h3>
+      <p class="card__description">
+        {{itemInfo?.description}}
+      </p>
+      <ul class="card__responsibilities responsibilities__list">
+        <li class="responsibilities__item" *ngFor="let resp of itemInfo?.descrList">
+          {{ resp }}
+        </li>
+      </ul>
+      <p class="card__skills">
+        {{itemInfo?.skillsTitle}}
+      </p>
+      <ul class="card__needs needs__list">
+        <li class="needs__item" *ngFor="let skill of itemInfo?.skills">
+          {{ skill }}
+        </li>
+      </ul>
+    </div>
+    <div class="card__container">
+      <div class="card__contact">
+        Contact us at
+        <a [href]="'mailto:' + itemInfo?.contactWith" class="card__mail">{{itemInfo?.contactWith}}</a>
+        and include information
+        about your previous works and experience
+        to set up an interview.
+      </div>
+      <a [href]="'mailto:' + itemInfo?.contactWith" class="card__btn btn" >Contact us now</a>
+    </div>
+  </div>
+</div>

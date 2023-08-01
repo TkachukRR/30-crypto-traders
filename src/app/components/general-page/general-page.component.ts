@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ScreenWidthService } from "../../services/screen-width.service";
 
-interface Hiring {
+export interface Hiring {
   cardTitle: string;
   position: string;
   description?: string;
